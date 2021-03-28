@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>动画绘制</title>
+<link rel="stylesheet" href="zltz.github.io/style.css">
+<script>
+  function p(){
+    var p = prompt("请输入要绘制的文字","text");
+    document.getElementById("text").innerHTML = p;
+  }
+</script>
+</head>
+
+<body>
+<svg viewBox="0 0 960 300">
+	<symbol id="s-text">
+		<text id="text" text-anchor="middle" x="50%" y="80%"></text>
+	</symbol>
+	<g class="g-ants">
+		<use xlink:href="#s-text" class="text"></use>
+		<use xlink:href="#s-text" class="text"></use>
+		<use xlink:href="#s-text" class="text"></use>
+		<use xlink:href="#s-text" class="text"></use>
+		<use xlink:href="#s-text" class="text"></use>
+	</g>
+</svg>
+<div class="dowebok">
+	<a href="#" onclick="p()">绘制文字</a>
+</div>
+
+</body>
+
+</html>
