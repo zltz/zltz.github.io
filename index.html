@@ -1,111 +1,188 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>
-			简源小站
-		</title>
 		<meta charset="utf-8">
-		<!--<link href="xxx.ico" rel="shortcut icon">-->
-		<script src="template.js">
+		<title>
+			简源·小站
+		</title>
+		<script>
+			function isHidden(oDiv) {
+				var vDiv = document.getElementById(oDiv);
+				vDiv.style.display = (vDiv.style.display == 'block') ? 'none': 'block';
+			};
 		</script>
-		<link rel="stylesheet" type="text/css" href="template.css">
+		<style>
+			* {
+				box-sizing:border-box;
+			}
+			body {
+				font-family:Arial;
+				padding:10px;
+				background:#f1f1f1;
+			}
+			.header {
+				padding:30px;
+				text-align:center;
+				background:white;
+			}
+			.header h1 {
+				font-size:50px;
+			}
+			.topnav {
+				overflow:hidden;
+				background-color:#333;
+			}
+			.topnav
+						a {
+				float:left;
+				display:block;
+				color:#f2f2f2;
+				text-align:center;
+				padding:14px 16px;
+				text-decoration:none;
+			}
+			.topnav a:hover {
+				background-color:#ddd;
+				color:black;
+			}
+			.rightcolumn {
+				float:left;
+				width:75%;
+			}
+			.leftcolumn {
+				float:left;
+				width:25%;
+				background-color:#f1f1f1;
+				padding-right:20px;
+			}
+			.fakeimg {
+				background-color:#aaa;
+				width:100%;
+				padding:20px;
+			}
+			.card {
+				background-color:white;
+				padding:20px;
+				margin-top:20px;
+			}
+			.row:after {
+				content:"";
+				display:table;
+				clear:both;
+			}
+			.footer {
+				padding:20px;
+				text-align:center;
+				background:#ddd;
+				margin-top:20px;
+			}
+			@media screen and (max-width:800px) {
+				.leftcolumn,.rightcolumn {
+				width:100%;
+				padding:0;
+			}
+			}@media screen
+						and (max-width:400px) {
+				.topnav a {
+				float:none;
+				width:100%;
+			}
+			}h2 {
+				background-color:blue;
+				border:2px solid black;
+			}
+			h3 {
+				background-color:yellow;
+				border:2px solid blue;
+			}
+			h4 {
+				background-color:red;
+			}
+			a {
+				text-decoration:none;
+			}
+			a:link {
+				color:#00FF00
+			}
+			a:visited {
+				color:#00FF00
+			}
+			a:hover {
+				color:#FFFFFF
+			}
+
+		</style>
 	</head>
 	<body id="body">
-		<div id="container">
-			<div id="header" style="background-color:#FFA500" align="center">
-				<h1 style="margin-bottom:0;display: inline-block">
-					<a title="简源小站·主页" href="index.html">
-						简源小站·主页
-					</a>
-				</h1>
-				<p style="display: inline-block">轻编程·轻体验</p>
-			</div>
-			<div id="menu" style="background-color:#FFD700;height:669px;text-align:center;overflow-y:scroll;float:left;">
-				<h2 style="margin-bottom:0;" align="center">
-					每月推送
-				</h2>
-				<p>
-					<!--<img src="Pic/Pic.png" width="100" height="100"/>
-					<br>
-					-->
-					<a title="2020年1月" href="1.html">
-						2020年1月
-					</a>
-					<br>
-					<a title="返回" href="javascript:history.go(-1);">
-						返回
-					</a>
-					<h2 style="margin-bottom:0;" align="center">
+		<div class="header">
+			<h1>
+				简源·小站
+			</h1>
+			<p>
+				轻生活·轻编程
+			</p>
+		</div>
+		<div class="topnav">
+			<a href="https://zltz.github.io/">
+				主页
+			</a>
+			<a href="https://blog.csdn.net/weixin_56068650">
+				CSDN
+			</a>
+			<a href="https://code.xueersi.com/space/13221519">
+				学思
+			</a>
+			<a href="#w" style="float:right">
+				文章
+			</a>
+		</div>
+		<div class="row">
+			<div class="leftcolumn">
+				<div class="card">
+					<h2>
+						我的头像
+					</h2>
+					<img style="width:100%;" src="P/简源.jpg">
+					</img>
+				</div>
+				<div class="card">
+					<h2>
 						我的收藏
 					</h2>
-					<a title="一起学网校" target="_blank" href="https://www.17xueaoshu.com/">
-						一起学网校
-					</a>
-					|
-					<a title="心田花开" target="_blank" href="https://www.xthk.cn/">
-						心田花开
-					</a>
-					|
-					<a title="学而思培优" target="_blank" href="https://www.speiyou.com/">
-						学而思培优
-					</a>
-					<br>
-					<br>
-					<a title="学而思网校" target="_blank" href="https://www.xueersi.com/">
-						学而思网校
-					</a>
-					推荐讲座:
-					<a title="少年读史记2" href="https://lecture.xueersi.com/pc/seriesList/410">
-						史记
-					</a>
-					|
-					<a title="帝王之谜" href="https://lecture.xueersi.com/pc/seriesList/146">
-						帝王
-					</a>
-					|
-					<a title="二十四节气" href="https://lecture.xueersi.com/pc/seriesList/103">
-						节气
-					</a>
-					|
-					<a title="三十六计" href="https://lecture.xueersi.com/pc/seriesList/297">
-						计谋
-					</a>
-					|
-					<a title="十分钟微课" href="https://lecture.xueersi.com/pc/seriesList/334">
-						文常
-					</a>
-					<br>
-					<br>
-					大语文知识总结:
-					<a title="四暑" href="#pdf" onclick="pdf('四暑')">
-						四暑
-					</a>
-					|
-					<a href="#" download="/Pdf/四暑.pdf">
-						下载
-					</a>
-					<a title="四秋" href="#pdf" onclick="pdf('四秋')">
-						四秋
-					</a>
-					|
-					<a href="#" download="/Pdf/四秋.pdf">
-						下载
-					</a>
-					<div style="display:none" id="pdf">
-						<h2 style="margin-bottom:0;" align="center">
-							文档演示
-						</h2>
-						<iframe src="Pdf/四暑.pdf" id="pdfFrame" width="98%">
-						</iframe>
-						<a href="#" onclick="launchIntoFullscreen(document.getElementById('pdfFrame'));">
-							全屏
+					<p>
+						<a title="返回" href="javascript:history.go(-1);">
+							返回
 						</a>
-					</div>
-				</p>
+						<br>
+						<br>
+						<a title="一起学网校" target="_blank" href="https://www.17xueaoshu.com/">
+							一起学网校
+						</a>
+						|
+						<a title="心田花开" target="_blank" href="https://www.xthk.cn/">
+							心田花开
+						</a>
+						<br>
+						<br>
+						<a title="学而思培优" target="_blank" href="https://www.speiyou.com/">
+							学而思培优
+						</a>
+						|
+						<a title="学而思网校" target="_blank" href="https://www.xueersi.com/">
+							学而思网校
+						</a>
+					</p>
+				</div>
+				<div class="card" id="w">
+					<h3>
+						我的CSDN
+					</h3>
+					<p>
+						一些文本...
+					</p>
+				</div>
 			</div>
-			<div id="content" style="background-color:#00F0F0;height:669px;overflow-y:scroll;float:left;">
-				<p id="tip" align="center" style="background-color: white;font-weight:bold;color: red;font-family: FangSong">
-				</p>
+			<div class="rightcolumn">
 				<h2 style="margin-bottom:0;" align="center">
 					2020年1月
 				</h2>
@@ -137,12 +214,9 @@
 					</div>
 				</div>
 			</div>
-			<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-				@张桐菁2020
-				<a href="#" onclick="launchIntoFullscreen(document.getElementById('body'));">
-					整体全屏
-				</a>
-			</div>
+		</div>
+		<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+			@简源2021
 		</div>
 	</body>
 
