@@ -19,10 +19,10 @@
 				font-family:Arial;
 				padding:10px;
 				background:#f1f1f1;
+				text-align: center;
 			}
 			.header {
 				padding:30px;
-				text-align:center;
 				background:white;
 			}
 			.header h1 {
@@ -30,20 +30,17 @@
 			}
 			.topnav {
 				overflow:hidden;
+				top: 0;
 				background-color:#333;
 			}
-			.topnav
-						a {
+			.topnav a {
 				float:left;
 				display:block;
 				color:#f2f2f2;
-				text-align:center;
 				padding:14px 16px;
-				text-decoration:none;
 			}
 			.topnav a:hover {
 				background-color:#ddd;
-				color:black;
 			}
 			.rightcolumn {
 				float:left;
@@ -72,9 +69,8 @@
 			}
 			.footer {
 				padding:20px;
-				text-align:center;
-				background:#ddd;
 				margin-top:20px;
+				clear: both;
 			}
 			@media screen and (max-width:800px) {
 				.leftcolumn,.rightcolumn {
@@ -114,15 +110,7 @@
 		</style>
 	</head>
 	<body id="body">
-		<div class="header">
-			<h1>
-				简源·小站
-			</h1>
-			<p>
-				轻生活·轻编程
-			</p>
-		</div>
-		<div class="topnav">
+	    <div class="topnav" style="position:fixed;width:99%">
 			<a href="https://zltz.github.io/">
 				主页
 			</a>
@@ -139,7 +127,15 @@
 				返回
 			</a>
 		</div>
-		<div class="row" style="text-align:center;">
+		<div class="header">
+			<h1>
+				简源·小站
+			</h1>
+			<p>
+				轻生活·轻编程
+			</p>
+		</div>
+		<div class="row">
 			<div class="leftcolumn">
 				<div class="card">
 					<h2>
@@ -181,7 +177,7 @@
 				</div>
 			</div>
 			<div class="rightcolumn">
-				<h2 style="margin-bottom:0;" align="center">
+				<h2 style="margin-bottom:0;">
 					2020年1月
 				</h2>
 				<div align="center" style="cursor:hand" onclick="isHidden('div1')">
@@ -190,13 +186,13 @@
 					</h3>
 				</div>
 				<div id="div1" style="display:none">
-					<p style="margin-bottom:0;" align="center">
+					<p style="margin-bottom:0;">
 						<br>
 						光
 					</p>
 				</div>
 				<br>
-				<div align="center">
+				<div>
 					<h3>
 						小品集
 					</h3>
@@ -213,7 +209,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+		<div id="footer" style="background-color:#FFA500;">
 			@简源2021
 		</div>
 	</body>
